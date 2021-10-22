@@ -12,6 +12,7 @@
     "axios": "^0.23.0",
     "expo": "~42.0.1",
     "expo-auth-session": "^3.4.2",
+    "expo-linear-gradient": "^10.0.3",
     "expo-status-bar": "~1.0.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
