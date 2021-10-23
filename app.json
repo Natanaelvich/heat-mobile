@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "heat-mobile",
-    "slug": "heat-mobile",
+    "name": "heat",
+    "slug": "heat",
     "version": "1.0.0",
     "orientation": "portrait",
     "scheme": "heat",
