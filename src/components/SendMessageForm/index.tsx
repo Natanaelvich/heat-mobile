@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
-import { Alert, Keyboard, TextInput, View } from 'react-native';
-import { api } from '../../services/api';
-import { COLORS } from '../../theme';
-import { Button } from '../Button';
+import React, { useState } from "react";
+import { Alert, Keyboard, TextInput, View } from "react-native";
+import { MotiView } from "moti";
 
-import { styles } from './styles';
+import { api } from "../../services/api";
+import { COLORS } from "../../theme";
+import { Button } from "../Button";
+
+import { styles } from "./styles";
 
 export function SendMessageForm() {
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
   const [sendingMessage, setSendingMessage] = useState(false);
 
   async function handleMessageSubmit() {
@@ -15,19 +17,24 @@ export function SendMessageForm() {
 
     if (messageFormatted.length > 0) {
       setSendingMessage(true);
-      await api.post('/messages', { message: messageFormatted });
+      await api.post("/messages", { message: messageFormatted });
 
-      setMessage('');
+      setMessage("");
       Keyboard.dismiss();
       setSendingMessage(false);
-      Alert.alert('Mensagem enviada com sucesso!');
+      Alert.alert("Mensagem enviada com sucesso!");
     } else {
-      Alert.alert('Escreva a mensagem para enviar.');
+      Alert.alert("Escreva a mensagem para enviar.");
     }
   }
 
   return (
-    <View style={styles.container}>
+    <MotiView
+      from={{ opacity: 0, translateY: 50 }}
+      animate={{ opacity: 1, translateY: 0 }}
+      transition={{ type: "timing", duration: 700 }}
+      style={styles.container}
+    >
       <TextInput
         keyboardAppearance="dark"
         placeholder="Qual sua expectativa para o evento"
@@ -47,7 +54,6 @@ export function SendMessageForm() {
         isLoading={sendingMessage}
         onPress={handleMessageSubmit}
       />
-
-    </View>
+    </MotiView>
   );
 }
