@@ -4,11 +4,22 @@
 
 ## ScreenShots
 
+<p align='center'>
+<img src='https://user-images.githubusercontent.com/52014318/138558852-10ddf904-ce75-469e-85e8-6e6554885283.jpg' width='275'>
+<img src='https://user-images.githubusercontent.com/52014318/138558863-98a870c1-9d5b-4959-ad9e-de5a5277534a.jpg' width='275'>
+<img src='https://user-images.githubusercontent.com/52014318/138558869-457a0fee-4be8-44d7-a1ae-eaf47444dfa7.jpg' width='275'>
+</p>
+
+<p align='center'>
+<img src='https://user-images.githubusercontent.com/52014318/138558936-7624555e-7b50-4ec6-bad5-0b61be14ddc2.gif' width='375'>
+</p>
+
 ## Install
 
     $ git clone https://github.com/ORG/PROJECT.git
     $ cd PROJECT
     $ npm install
+
 
 ## Start & watch
 
